@@ -162,7 +162,7 @@ public class TreeBuilderModeBase
 			
 			default:
 				// Finish is assumed to be WtBold, WtItalics or an WtXmlElement node
-				throw new AssertionError();
+				throw new IllegalArgumentException("Node was assumed to be bold or italics, but was type "+getNodeType(finish));
 		}
 	}
 }
